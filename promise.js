@@ -41,7 +41,7 @@ const urls = [
 ]
 
 Promise.all(urls.map(url => {
-    fetch(url).then(response => response.json())
+    return fetch(url).then(response => response.json())
 })).then(results => {
     results.map(result => {
         console.log(result);
